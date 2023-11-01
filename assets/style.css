@@ -1,0 +1,366 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none !important;
+    list-style: none;
+}
+
+/* Header Section */
+
+.header {
+  
+    z-index: 999; 
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 14%;
+    transition: all linear .3s;
+    position: fixed;
+    backdrop-filter: blur(10px);
+}
+
+.header .logo a {
+    color: var(--main-clr);
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    padding: 0 5px;
+}
+
+.navbar ul li a {
+    padding: 0 10px;
+    color: var(--blck-clr);
+    transition: all ease-in-out .3s;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover {
+    color: var(--main-clr);
+}
+
+.contact-me {
+    display: flex;
+    align-items: center;
+}
+
+.contact-me a {
+    color: var(--wht-clr);
+    border: 2px solid var(--blck-clr);
+    border-radius: 10px;
+    background: var(--blck-clr);
+    font-weight: 800;
+    transition: all ease-in-out .3s;
+    padding: 8px 18px;
+}
+
+.contact-me a:hover {
+    border: 2px solid var(--main-clr);
+    background: transparent;
+    color: var(--main-clr);
+}
+
+#menu {
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    padding: 0 5px;
+    margin: 0 10px;
+    font-size: 2.1rem;
+}
+
+/* Sticky Navbar Toggle */
+
+.sticky{
+    background: rgba(255,255,255,.1);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+}
+
+/* Hero Section */
+
+.hero {
+    transition: all linear .3s;
+    padding: 20px 14%;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 3rem;
+}
+
+.hero .details span:first-child {
+    color: var(--main-clr);
+    font-weight: 700;
+
+}
+
+.hero .details span:last-child {
+    color: var(--main-clr);
+    font-weight: 400;
+}
+
+.details h1 {
+    font-size: 3.2rem;
+    margin: 6px 0;
+    text-transform: capitalize;
+}
+
+.details h2 {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-top: 16px;
+}
+
+.details p {
+    margin: 16px 0;
+    color: var(--para-clr);
+}
+
+.details .social-icons {
+    margin: 25px 0 40px 0;
+    font-size: 1.5rem;
+}
+
+
+.details>.social-icons>i {
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+    background: #005eff;
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35%;
+    border: 2px solid var(--main-clr);
+}
+
+.details>.social-icons>i:hover {
+    background: transparent;
+    color: var(--main-clr);
+    border: 2px solid var(--main-clr);
+
+}
+
+/* .talk-me-btn{
+    margin-top: 20px;
+} */
+
+.talk-me-btn a {
+    color: var(--wht-clr);
+    border: 2px solid var(--blck-clr);
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: var(--blck-clr);
+    font-weight: 800;
+    transition: all ease-in-out .3s;
+}
+
+.talk-me-btn a i {
+    padding: 0 5px;
+    transform: rotate(314deg);
+    font-size: 1.4rem;
+}
+
+.talk-me-btn a:hover {
+    background: transparent;
+    color: var(--main-clr);
+    border: 2px solid var(--main-clr);
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+/* Scroll  */
+
+.scroll {
+    position: absolute;
+    top: 94%;
+    left: 45%;
+    /* transform: translateY(-50%); */
+    transition: all linear .3s;
+    animation: scroll 4s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(3px);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(3px);
+    }
+}
+
+.scroll a {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    color: var(--main-clr);
+    font-weight: 500;
+}
+
+.scroll a i {
+    padding: 0 5px;
+    /* font-size: px; */
+    color: var(--blck-clr);
+}
+
+.scroll:hover {
+    /* transform: translateY(10px); */
+    animation: none;
+}
+
+/* About Section */
+
+.about-me {
+    width: 100%;
+    padding: 50px 14%;
+    background-color: var(--bg-clr);
+    display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-me .about-head h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 6px 0;
+    text-transform: capitalize;
+    color: var(--wht-clr);
+}
+
+.about-details {
+    background-color: var(--wht-clr);
+    width: 50%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px #5152525c;
+    line-height: 1.7;
+    color: var(--para-clr);
+}
+
+/* Skills Section */
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 30px;
+}
+
+#skills>h1{
+    text-align: center;
+}
+
+.front-end,
+.back-end,
+.other {
+    width: 350px;
+    height: 250px;
+    box-shadow: 0px 0px 10px 3px #99999952;
+    margin-block: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.skill-head {
+    background: var(--bg-clr);
+    height: 70px;
+    color: white;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+}
+
+.skill-head h1 {
+    font-size: 1.2rem;
+}
+
+.skill-icon i{
+    font-size: 1.7rem;
+    color: var(--wht-clr);
+    margin-bottom: 8px;
+}
+
+.skill-items {
+    text-align: center;
+    font-size: .9rem;
+    color: var(--para-clr);
+    padding-block: 10px;
+}
+
+.skill-items li {
+    padding-block: 5px;
+}
+
+/*--------Projects--------*/
+
+#projects{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 14%;
+}
+
+.project-head{
+    text-align: center;
+}
+
+.project-detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 30px 0;
+}
+
+
+
+.project-image img{
+    width: 500px;
+    height: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* .project-item{
+    width: 500px;
+} */
+
+.project-item h2{
+    color: var(--main-clr);
+}
+
+.project-item p{
+    color: var(--para-clr);
+    margin: 20px 0;
+}
+
+.project-item a{
+    color: var(--blck-clr);
+}
